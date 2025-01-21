@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMSAT Online - Pelayanan Publik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fitur.html">
+    <link rel="stylesheet" href="payment.html">
+</head>
+    <style>
+        /* Copy the same styles from index.html */
+        /* Additional styles for kontak page */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background-color: #C4A484s;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--medium-brown);
+            border-radius: 4px;
+            font-size: 1rem;
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <svg class="samsat-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base Circle -->
+                    <circle cx="50" cy="50" r="45" fill="#3D2419" stroke="#D2691E" stroke-width="2"/>
+                    
+                    <!-- Car Symbol -->
+                    <g class="car" fill="#D2691E">
+                        <path d="M30 55 H70 L65 40 H35 L30 55" />
+                        <circle cx="35" cy="60" r="5" />
+                        <circle cx="65" cy="60" r="5" />
+                        <rect x="40" y="43" width="20" height="12" />
+                    </g>
+                    
+                    <!-- Text Path -->
+                    <path id="textPath" d="M50,15 A35,35 0 1,1 49.999,15" fill="none"/>
+                    <text fill="#F5DEB3" font-size="12">
+                        <textPath href="#textPath" startOffset="5%">
+                            SAMSAT ONLINE • PELAYANAN PUBLIK •
+                        </textPath>
+                    </text>
+                </svg>
+                SAMSAT ONLINE
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+		<a href="informasi.html">Informasi</a>
+                <a href="fitur.html">Layanan</a>
+                <a href="payment.html">Pembayaran</a>
+                <a href="kontak.html"s>Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero" id="beranda">
+        <div class="hero-content">
+            <h1>Selamat Datang di SAMSAT Online</h1>
+            <p>Pelayanan Cepat, Mudah, dan Transparan</p>
+        </div>
+    </div>
+  
+    <main>
+        <h1>Hubungi Kami</h1>
+        <div class="content">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h2>Kantor Pusat</h2>
+                    <p>Jl. SAMSAT Raya No. 1</p>
+                    <p>Telp: (021) 123456</p>
+                    <p>Email: info@samsat.go.id</p>
+                </div>
+
+                <div class="contact-card">
+                    <h2>Jam Operasional</h2>
+                    <p>Senin - Jumat: 08.00 - 15.00</p>
+                    <p>Sabtu: 08.00 - 12.00</p>
+                    <p>Minggu: Tutup</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Kirim Pesan</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" required></textarea>
+                    </div>
+
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+  
+    <footer>
+
+    <div class="hero" id="beranda">
+        <div class="hero-content">
+        <p>&copy; 2025 SAMSAT Online. Hak Cipta Dilindungi.</p>
+	</div>
+    </div>
+
+    </footer>
+
+</body>
+</html>

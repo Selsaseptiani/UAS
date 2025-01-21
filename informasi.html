@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - SAMSAT Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+        /* Copy the same styles from index.html */
+        /* Additional styles for layanan page */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: cream;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--medium-brown);
+            margin-bottom: 1rem;
+        }
+    </style>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <svg class="samsat-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base Circle -->
+                    <circle cx="50" cy="50" r="45" fill="#3D2419" stroke="#D2691E" stroke-width="2"/>
+                    
+                    <!-- Car Symbol -->
+                    <g class="car" fill="#D2691E">
+                        <path d="M30 55 H70 L65 40 H35 L30 55" />
+                        <circle cx="35" cy="60" r="5" />
+                        <circle cx="65" cy="60" r="5" />
+                        <rect x="40" y="43" width="20" height="12" />
+                    </g>
+                    
+                    <!-- Text Path -->
+                    <path id="textPath" d="M50,15 A35,35 0 1,1 49.999,15" fill="none"/>
+                    <text fill="#F5DEB3" font-size="12">
+                        <textPath href="#textPath" startOffset="5%">
+                            SAMSAT ONLINE • PELAYANAN PUBLIK •
+                        </textPath>
+                    </text>
+                </svg>
+                SAMSAT ONLINE
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="informasi.html">Informasi</a>
+                <a href="fitur.html">Layanan</a>
+                <a href="payment.html">Pembayaran</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+        </div>
+
+
+    <div class="hero" id="beranda">
+        <div class="hero-content">
+            <h1>Informasi Pelayanan SAMSAT Online</h1>
+            <p>Baca dengan teliti persyaratan yang diperlukan</p>
+        </div>
+    </div>
+
+
+    </nav>
+
+    <!-- Copy navigation from index.html -->
+    
+    <main>
+
+  <div class="container services" id="layanan">
+        <div class="service-card" onclick="window.location.href='pages/features.html#pajak'">
+            <h3>Persyaratan Pembayaran Pajak Kendaraan</h3>
+             <p>Dokumen yang perlu disiapkan:</p>
+                <ul>
+                    <p>KTP asli dan fotokopi</p>
+                    <p>STNK asli dan fotokopi</p>
+                    <p>BPKB asli dan fotokopi</p>
+                </ul>
+        </div>
+
+        <div class="service-card" onclick="window.location.href='pages/features.html#stnk'">
+            <h3>Persyaratan Perpanjangan STNK</h3>
+                <p>Dokumen yang perlu disiapkan:</p>
+                <ul>
+                    <p>STNK asli yang masih berlaku atau sudah kadaluarsa</p>
+                    <p>KTP asli dan fotokopi</p>
+                    <p>BPKB asli dan fotokopi</p>
+		    <p>Bukti Pembayaran pajak kendaraan tahunan</p>
+                </ul>           
+        </div>
+
+        <div class="service-card" onclick="window.location.href='pages/features.html#mutasi'">
+             <h3>Persyaratan Mutasi Kendaraan</h3>
+                <p>Dokumen yang perlu disiapkan:</p>
+                <ul>
+                    <p>KTP pemilik baru asli dan fotokopi</p>
+                    <p>STNK asli</p>
+                    <p>BPKB asli dan fotokopi</p>
+                    <p>Kwitansi pembelian kendaraan dari pemilik sebelumnya(jika ada)</p>
+                    <p>Arsip kendaraan dari SAMSAT asal kendaraan terdaftar</p>
+                    <p>Fiskal antar daerah</p>
+                </ul>
+        </div>
+    </div>
+
+	</div>
+            <div class="info-card">
+                <h2>Jadwal Operasional</h2>
+                <p>Senin - Jumat: 08.00 - 15.00</p>
+                <p>Sabtu: 08.00 - 12.00</p>
+                <p>Minggu: Tutup</p>
+            </div>
+        </div>
+    </main>
+   
+    <div class="hero" id="beranda">
+        <div class="hero-content">
+        <p>&copy; 2025 SAMSAT Online. Hak Cipta Dilindungi.</p>
+	</div>
+    </div>
+    </footer>
+
+</body>
+</html>

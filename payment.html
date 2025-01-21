@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMSAT Online - Pelayanan Publik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fitur.html">
+    <link rel="stylesheet" href="payment.html">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <svg class="samsat-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base Circle -->
+                    <circle cx="50" cy="50" r="45" fill="#3D2419" stroke="#D2691E" stroke-width="2"/>
+                    
+                    <!-- Car Symbol -->
+                    <g class="car" fill="#D2691E">
+                        <path d="M30 55 H70 L65 40 H35 L30 55" />
+                        <circle cx="35" cy="60" r="5" />
+                        <circle cx="65" cy="60" r="5" />
+                        <rect x="40" y="43" width="20" height="12" />
+                    </g>
+                    
+                    <!-- Text Path -->
+                    <path id="textPath" d="M50,15 A35,35 0 1,1 49.999,15" fill="none"/>
+                    <text fill="#F5DEB3" font-size="12">
+                        <textPath href="#textPath" startOffset="5%">
+                            SAMSAT ONLINE • PELAYANAN PUBLIK •
+                        </textPath>
+                    </text>
+                </svg>
+                SAMSAT ONLINE
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+		<a href="informasi.html">Informasi</a>
+                <a href="fitur.html">Layanan</a>
+                <a href="payment.html">Pembayaran</a>
+                <a href="kontak.html"">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero" id="beranda">
+        <div class="hero-content">
+            <h1>Selamat Datang di SAMSAT Online</h1>
+            <p>Pelayanan Cepat, Mudah, dan Transparan</p>
+        </div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f0eb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #3E2723;
+            color: #fff5eb;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #E5DDD3;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(62, 39, 35, 0.2);
+        }
+
+        .card h2 {
+            color: #4E342E;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #5D4037;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #BCAAA4;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        input:focus, select:focus {
+            border-color: #795548;
+            outline: none;
+        }
+
+        button {
+            background-color: #5D4037;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4E342E;
+        }
+
+        .status-info {
+            background-color: #EFEBE9;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            color: #3E2723;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .payment-method {
+            border: 1px solid #BCAAA4;
+            padding: 10px;
+            border-radius: 4px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .payment-method:hover {
+            background-color: #EFEBE9;
+        }
+
+        .alert {
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            background-color: #D7CCC8;
+            border: 1px solid #BCAAA4;
+            color: #3E2723;
+        }
+
+        /* Additional brown theme styles */
+        input::placeholder {
+            color: #5D4037;
+        }
+
+        select option {
+            color: #5D4037;
+        }
+
+        .payment-method div {
+            color: #5D4037;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Layanan Pembayaran SAMSAT Online</h1>
+            <p>Bayar Pajak Kendaraan, Perpanjangan STNK, dan Migrasi Kendaraan</p>
+        </div>
+
+        <div class="service-cards">
+            <!-- Pembayaran Pajak Kendaraan -->
+            <div class="card">
+                <h2>Pembayaran Pajak Kendaraan</h2>
+                <div class="form-group">
+                    <label for="nopol-pajak">Nomor Polisi</label>
+                    <input type="text" id="nopol-pajak" placeholder="Contoh: B 1234 ABC" required>
+                </div>
+                <div class="form-group">
+                    <label for="nik-pajak">NIK</label>
+                    <input type="text" id="nik-pajak" placeholder="Masukkan NIK" required>
+                </div>
+                <div class="status-info">
+                    Total Pajak: Rp. <span id="total-pajak">0</span>
+                </div>
+                <button onclick="cekPajak()">Cek Tagihan & Bayar</button>
+            </div>
+
+            <!-- Perpanjangan STNK -->
+            <div class="card">
+                <h2>Perpanjangan STNK</h2>
+                <div class="form-group">
+                    <label for="nopol-stnk">Nomor Polisi</label>
+                    <input type="text" id="nopol-stnk" placeholder="Contoh: B 1234 ABC" required>
+                </div>
+                <div class="form-group">
+                    <label for="nik-stnk">NIK</label>
+                    <input type="text" id="nik-stnk" placeholder="Masukkan NIK" required>
+                </div>
+                <div class="form-group">
+                    <label for="masa-berlaku">Masa Berlaku STNK</label>
+                    <input type="date" id="masa-berlaku" required>
+                </div>
+                <button onclick="perpanjangSTNK()">Perpanjang STNK</button>
+            </div>
+
+            <!-- Migrasi Kendaraan -->
+            <div class="card">
+                <h2>Migrasi Kendaraan</h2>
+                <div class="form-group">
+                    <label for="nopol-migrasi">Nomor Polisi</label>
+                    <input type="text" id="nopol-migrasi" placeholder="Contoh: B 1234 ABC" required>
+                </div>
+                <div class="form-group">
+                    <label for="nik-migrasi">NIK</label>
+                    <input type="text" id="nik-migrasi" placeholder="Masukkan NIK" required>
+                </div>
+                <div class="form-group">
+                    <label for="lokasi-asal">Lokasi Asal</label>
+                    <select id="lokasi-asal" required>
+                        <option value="">Pilih Lokasi Asal</option>
+                        <option value="jakarta">DKI Jakarta</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="surabaya">Surabaya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lokasi-tujuan">Lokasi Tujuan</label>
+                    <select id="lokasi-tujuan" required>
+                        <option value="">Pilih Lokasi Tujuan</option>
+                        <option value="jakarta">DKI Jakarta</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="surabaya">Surabaya</option>
+                        <option value="Banten">Banten</option>
+                    </select>
+                </div>
+                <button onclick="migrasiKendaraan()">Proses Migrasi</button>
+            </div>
+        </div>
+
+        <!-- Metode Pembayaran -->
+        <div class="card">
+            <h2>Metode Pembayaran</h2>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <img src="bank.jpeg" alt="Bank Transfer">
+                    <div>Transfer Bank</div>
+                </div>
+                <div class="payment-method">
+                    <img src="dana.jpeg" alt="E-Wallet">
+                    <div>E-Wallet</div>
+                </div>
+                <div class="payment-method">
+                    <img src="kredit.jpeg" alt="Credit Card">
+                    <div>Kartu Kredit</div>
+                </div>
+                <div class="payment-method">
+                    <img src="qris.png" alt="QRIS">
+                    <div>QRIS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informasi Status -->
+        <div class="alert">
+            Silakan pilih layanan yang Anda butuhkan dan ikuti petunjuk pembayaran
+        </div>
+    </div>
+
+    <script>
+        function cekPajak() {
+            alert('Sistem sedang memproses pengecekan pajak kendaraan Anda');
+        }
+
+        function perpanjangSTNK() {
+            alert('Sistem sedang memproses perpanjangan STNK Anda');
+        }
+
+        function migrasiKendaraan() {
+            alert('Sistem sedang memproses permintaan migrasi kendaraan Anda');
+        }
+    </script>
+</body>
+</html>

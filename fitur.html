@@ -1,0 +1,124 @@
+<!-- pages/features.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - SAMSAT Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+        /* Copy the same styles from index.html */
+        /* Additional styles for layanan page */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: cream;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--medium-brown);
+            margin-bottom: 1rem;
+        }
+    </style>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <svg class="samsat-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base Circle -->
+                    <circle cx="50" cy="50" r="45" fill="#3D2419" stroke="#D2691E" stroke-width="2"/>
+                    
+                    <!-- Car Symbol -->
+                    <g class="car" fill="#D2691E">
+                        <path d="M30 55 H70 L65 40 H35 L30 55" />
+                        <circle cx="35" cy="60" r="5" />
+                        <circle cx="65" cy="60" r="5" />
+                        <rect x="40" y="43" width="20" height="12" />
+                    </g>
+                    
+                    <!-- Text Path -->
+                    <path id="textPath" d="M50,15 A35,35 0 1,1 49.999,15" fill="none"/>
+                    <text fill="#F5DEB3" font-size="12">
+                        <textPath href="#textPath" startOffset="5%">
+                            SAMSAT ONLINE • PELAYANAN PUBLIK •
+                        </textPath>
+                    </text>
+                </svg>
+                SAMSAT ONLINE
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="informasi.html">Informasi</a>
+                <a href="fitur.html">Layanan</a>
+                <a href="payment.html">Pembayaran</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero service-hero">
+        <div class="hero-content">
+            <h1>Layanan Digital SAMSAT</h1>
+            <p>Kemudahan dalam Genggaman Anda</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">1M+</span>
+                    <span class="stat-label">Pengguna</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Layanan</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5 Menit</span>
+                    <span class="stat-label">Proses</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container services" id="layanan">
+        <div class="service-card" onclick="window.location.href='pages/features.html#pajak'">
+            <img src="pajak.jpeg" alt="Pembayaran Pajak" class="service-image">
+            <h3>Pembayaran Pajak Kendaraan</h3>
+            <p>Bayar pajak kendaraan bermotor Anda secara online dengan mudah dan aman.</p>
+            <a href="payment.html" class="btn">Bayar Sekarang</a>
+        </div>
+
+        <div class="service-card" onclick="window.location.href='pages/features.html#stnk'">
+            <img src="stnk.jpeg" alt="Perpanjangan STNK" class="service-image">
+            <h3>Perpanjangan STNK</h3>
+            <p>Perpanjang STNK kendaraan Anda tanpa perlu antri.</p>
+            <a href="payment.html" class="btn">Perpanjang STNK</a>
+        </div>
+
+        <div class="service-card" onclick="window.location.href='pages/features.html#mutasi'">
+            <img src="migrasi.jpeg" alt="Mutasi Kendaraan" class="service-image">
+            <h3>Mutasi Kendaraan</h3>
+            <p>Urus mutasi kendaraan bermotor Anda dengan mudah.</p>
+            <a href="payment.html" class="btn">Ajukan Mutasi</a>
+        </div>
+    </div>
+    
+    <div class="hero" id="beranda">
+        <div class="hero-content">
+        <p>&copy; 2025 SAMSAT Online. Hak Cipta Dilindungi.</p>
+	</div>
+    </div>
+    </footer>
+</body>
+</html>
